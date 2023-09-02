@@ -1,0 +1,317 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: skyblue; /* Healthcare-themed color */
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Home Section Styles */
+.home {
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+.text-container h1,
+.text-container p,
+.animated-text span {
+    color: teal;
+}
+
+
+/* Home Section Styles */
+.home {
+    position: relative;
+    height: 100vh; /* Ensure the section takes the full viewport height */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+     display:flex;
+     justify-content: center;
+     align-items: center;
+}   
+
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set the height to 100% to cover the entire section */
+    z-index: -1;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container {
+    text-align: center;
+    color: white; /* Text color */
+    opacity: 0; /* Start with 0 opacity for animation */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 1s ease, transform 1s ease; /* Animation transition */
+}
+
+.text-animation {
+    display: inline-block;
+}
+
+.text-animation h1 {
+    font-size: 36px;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appear 1s ease forwards;
+}
+/* Animation when class "animate" is added */
+.text-container.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-animation span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appear 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home h1 {
+    font-size: 36px;
+}
+
+/* Add more section styles here */
+
+/* Footer Styles (Optional) */
+footer {
+    background-color:  skyblue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+/* Social Media Icons */
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    color: white; /* Icon color is white */
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+/* Add more styles as needed */
+
+/* ... (Previous CSS) ... */
+/* Services Section Styles */
+.services {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center; /* Center-align the header */
+}
+
+.services h2 {
+    font-size: 32px; /* Increase the font size for the header */
+    margin-bottom: 30px; /* Add space between header and services */
+}
+
+/* Service Containers */
+.service {
+    background-color: lightblue; /* Light green background */
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    border-radius: 5px;
+    margin: 0 auto 30px; /* Center and add space between service containers */
+    max-width: 300px; /* Limit the width of service containers */
+}
+
+.service h3 {
+    color: #333;
+    font-size: 24px; /* Increase the font size for service titles */
+}
+
+.service p {
+    color: #666;
+    font-size: 16px; /* Adjust the font size for service descriptions */
+}
+.services {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+    text-align: center; /* Center-align the header and services */
+}
+
+.section-header {
+    margin-bottom: 30px; /* Add space between header and services */
+}
+
+.services h2 {
+    font-size: 32px;
+}
+/* Add media queries for responsiveness if needed */
+
+/* About Us Section Styles */
+.about {
+    background-color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.founder {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.founder-image {
+    background-color: white; /* Pink background for the image */
+    padding: 10px; /* Add padding to the image */
+    border-radius: 50%; /* Rounded image */
+    box-shadow: 0px 2px 4px rgba(0, 128, 128, 0.3); /* Teal shadow */
+}
+
+.founder img {
+    width: 150px;
+    height: 150px;
+    border-radius: 98%;
+    object-fit: cover;
+    margin-bottom: 1px; /* Space between image and name */
+}
+
+.founder h3 {
+    font-size: 24px;
+    margin: 0; /* Remove default margins for paragraph elements */
+}
+
+.founder p {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Motto, Mission, and Vision container styles */
+.motto,
+.mission,
+.vision {
+    background-color: lightblue; /* Light green background */
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 128, 128, 0.3); /* Teal shadow */
+    border-radius: 5px;
+    margin-bottom: 20px; /* Space between containers */
+}
+
+.motto h4,
+.mission h4,
+.vision h4 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.testimonial-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Spacing between testimonials */
+    gap: 20px;
+}
+
+.testimonial {
+    flex-basis: calc(33.33% - 20px); /* 3 testimonials per row with 20px gap */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 300px;
+}
+
+.testimonial-image {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.testimonial-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial blockquote {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    font-size: 16px;
+}
